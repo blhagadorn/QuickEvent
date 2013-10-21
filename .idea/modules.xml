@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/QuickEvent/QuickEvent.iml" filepath="$PROJECT_DIR$/QuickEvent/QuickEvent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickEventProject.iml" filepath="$PROJECT_DIR$/QuickEventProject.iml" />
+    </modules>
+  </component>
+</project>
+
