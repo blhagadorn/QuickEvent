@@ -29,17 +29,18 @@ public class QEDate {
 //String format currently is id--day--month--year--startHour--endHour
     public String dateToString(QEDate qedate) {
         try {
+            String divider = "--";
             StringBuilder sb = new StringBuilder();
             sb.append(qedate.getId());
-            sb.append("--");
+            sb.append(divider);
             sb.append(qedate.getDay());
-            sb.append("--");
+            sb.append(divider);
             sb.append(qedate.getMonth());
-            sb.append("--");
+            sb.append(divider);
             sb.append(qedate.getYear());
-            sb.append("--");
+            sb.append(divider);
             sb.append(qedate.getStartHour());
-            sb.append("--");
+            sb.append(divider);
             sb.append(qedate.getEndHour());
             String s = sb.toString();
             return s;
@@ -51,12 +52,18 @@ public class QEDate {
 
     public QEDate stringToDate(String qedatestring){
         try {
-            TextUtils.StringSplitter
+            String[] splitStrings = qedatestring.split("--");
+            int[] intValues = null;
+            for (int i = 0; i < splitStrings.length; i++) {
+                intValues[i] = Integer.parseInt(splitStrings[i]);
+            }
+            QEDate qedate = new QEDate(intValues[0],intValues[1],intValues[2],intValues[3],intValues[4],intValues[5]);
+            return qedate;
         }
         catch (Exception e){
-
+            Log.d("exception_stod",e.getMessage());
+            return null;
         }
-
     }
 
 

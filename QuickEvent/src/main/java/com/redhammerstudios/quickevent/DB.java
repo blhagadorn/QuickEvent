@@ -27,6 +27,7 @@ public class DB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     // Database Name
     private static final String DATABASE_NAME = "userData";
+    private static final String TABLE_
     private static final String TABLE_FRIENDS = "friends";
     private static final String KEY_ID = "id";
     private static final String KEY_FIRST_NAME = "first_name";
@@ -70,7 +71,7 @@ public class DB extends SQLiteOpenHelper {
         values.put(KEY_DATE_ADDED, friend.getDateAdded().toString());
         values.put(KEY_PHONE_NUMBER, friend.getPhoneNumber());
         values.put(KEY_USER_NAME, friend.getUserName());
-        values.put(KEY_COUNT_OF_EVENTS,
+        values.put(KEY_COUNT_OF_EVENTS, friend.getCountOfEvents());
 
 
         // Inserting Row
@@ -82,14 +83,14 @@ public class DB extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABLE_FRIENDS, new String[] { KEY_ID,
-                KEY_FIRST_NAME,KEY_LAST_NAME, KEY_ }, KEY_ID + "=?",
+                KEY_FIRST_NAME,KEY_LAST_NAME, KEY_DATE_ADDED, KEY_PHONE_NUMBER, KEY_USER_NAME, KEY_COUNT_OF_EVENTS }, KEY_ID + "=?",
                 new String[] { String.valueOf(id) }, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
 
-        Friend friend = new Friend(Integer.parseInt(cursor.getString(0)),
+//        Friend friend = new Friend(Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1), cursor.getString(2));
-        return friend;
+//        return friend;
     }
 
     public List<Friend> getAllFriends() {
