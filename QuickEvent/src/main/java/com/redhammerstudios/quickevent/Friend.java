@@ -14,6 +14,16 @@ public class Friend {
     String userName;
     int countOfEvents;
 
+    public Friend(int id, String firstName, String lastName, Date dateAdded, String phoneNumber, String userName, int countOfEvents) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateAdded = dateAdded;
+        this.phoneNumber = phoneNumber;
+        this.userName = userName;
+        this.countOfEvents = countOfEvents;
+    }
+
     public int getId() {
         return id;
     }

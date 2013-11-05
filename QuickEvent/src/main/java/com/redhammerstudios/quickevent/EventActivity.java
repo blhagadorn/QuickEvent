@@ -1,5 +1,6 @@
 package com.redhammerstudios.quickevent;
 
+import com.redhammerstudios.quickevent.Friend;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
