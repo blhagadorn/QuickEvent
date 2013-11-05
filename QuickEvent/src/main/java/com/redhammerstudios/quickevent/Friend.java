@@ -71,4 +71,6 @@ public class Friend {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
+    public int getCountOfEvents() { return countOfEvents;} public void setCountOfEvents(int countOfEvents) {this.countOfEvents = countOfEvents;}
 }
