@@ -21,7 +21,7 @@ public class SplashActivity extends Activity {
         login = (Button)findViewById(R.id.splashloginbutton);
         register = (Button) findViewById(R.id.splashregisterbutton);
 
-        login.set
+        login.setOnClickListener();
 
     }
 
@@ -37,10 +37,7 @@ public class SplashActivity extends Activity {
     public boolean checkIfLoggedIn(){
         SharedPreferences prefs = this.getSharedPreferences(
                 "com.redhammerstudios.quickevent", Context.MODE_PRIVATE);
-
-        return prefs.getBoolean("stayLoggedIn");
-
-
+        return prefs.getBoolean("skipLogin",false);
     }
     
 }
