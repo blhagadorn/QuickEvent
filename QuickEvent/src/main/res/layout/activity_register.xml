@@ -9,112 +9,75 @@
     tools:context=".RegisterActivity$PlaceholderFragment"
     android:background="@color/grey">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Create your QE account"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="30sp" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="3dp"
-        android:background="@color/red4"
-        android:layout_alignParentStart="true"
-        android:id="@+id/view"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="8dp" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/loginbutton"
+        android:text="login"
+        android:id="@+id/registerloginbutton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@color/red4" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="First Name:"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/view"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Last Name:"
-        android:id="@+id/textView5"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/firstnameedittext"
-        android:layout_alignParentLeft="true" />
-
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Joe"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/firstnameedittext"
-        android:background="@color/greylight"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/registerpasswordedittext"
+        android:background="@color/white"
+        android:layout_below="@+id/registeremailedittext"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Schmoe"
-        android:ems="10"
-        android:id="@+id/lastnameedittext"
-        android:background="@color/greylight"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Phone Number:"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/lastnameedittext"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="20dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/phonenumberedittext"
-        android:background="@color/greylight"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="2dp"
+        android:layout_alignRight="@+id/registeremailedittext"
+        android:textSize="20sp"
+        android:text="Password" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   Create   "
-        android:id="@+id/createbutton"
-        android:layout_marginTop="42dp"
+        android:text="create"
+        android:id="@+id/registercreatebutton"
         android:background="@color/red4"
         android:textSize="35sp"
-        android:layout_below="@+id/phonenumberedittext"
+        android:layout_below="@+id/registerbirthdayedittext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageButton2"
+        android:background="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/registeremailedittext"
+        android:layout_marginTop="20dp"
+        android:autoText="false"
+        android:text="Email Address"
+        android:background="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/registercreatebutton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/registerbirthdayedittext"
+        android:layout_below="@+id/registerpasswordedittext"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="2dp"
+        android:layout_alignRight="@+id/registerpasswordedittext"
+        android:background="@color/white"
+        android:text="What's your birthday?" />
 
 </RelativeLayout>

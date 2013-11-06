@@ -7,7 +7,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".SplashActivity"
-    android:background="@color/greylight">
+    android:background="@color/grey"
+    android:focusable="true">
 
     <ImageView
         android:layout_width="150dp"
@@ -15,9 +16,8 @@
         android:id="@+id/splashIcon"
         android:src="@drawable/ic_launcher"
         android:scaleType="fitXY"
-        android:layout_above="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,9 +25,36 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="seamless event planning "
         android:id="@+id/textView"
-        android:textSize="40dp"
+        android:textSize="45sp"
         android:gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/splashIcon"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="164dp" />
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create an account"
+        android:id="@+id/splashregisterbutton"
+        android:layout_below="@+id/splashloginbutton"
+        android:layout_alignParentLeft="true"
+        android:textSize="25sp"
+        android:background="@color/red4"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignRight="@+id/splashloginbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:id="@+id/splashloginbutton"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:background="@color/red4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 </RelativeLayout>

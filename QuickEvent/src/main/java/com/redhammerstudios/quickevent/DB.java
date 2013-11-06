@@ -27,7 +27,7 @@ public class DB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     // Database Name
     private static final String DATABASE_NAME = "userData";
-    private static final String TABLE_
+    private static final String TABLE_USER = "user";
     private static final String TABLE_FRIENDS = "friends";
     private static final String KEY_ID = "id";
     private static final String KEY_FIRST_NAME = "first_name";
