@@ -3,17 +3,21 @@ package com.redhammerstudios.quickevent;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 
 public class RegisterActivity extends Activity {
     Button login, create;
-    EditText emailAddress, password, birthday;
+    EditText emailEditText, passwordEditText;
+    DatePicker birthdayDatePicker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +26,40 @@ public class RegisterActivity extends Activity {
         //get buttons and edittexts by id
         login = (Button)findViewById(R.id.registerloginbutton);
         create = (Button)findViewById(R.id.registercreatebutton);
-        emailAddress = (EditText) findViewById(R.id.registeremailedittext);
-        password = (EditText)findViewById(R.id.registerpasswordedittext);
-        birthday = (EditText)findViewById(R.id.registerbirthdayedittext);
+        emailEditText = (EditText) findViewById(R.id.registeremailedittext);
+        passwordEditText = (EditText)findViewById(R.id.registerpasswordedittext);
+        birthdayEditText = (EditText)findViewById(R.id.registerbirthdayedittext);
+
+
+        emailEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(emailEditText.getText().toString().equals("example@email.com")){
+                    emailEditText.setText("");
+                }
+            }
+        });
+
+        passwordEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus == true){
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    passwordEditText.setText("");
+                }
+            }
+        });
+
+        birthdayEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                birthdayEditText.setText("");
+            }
+        });
+
+
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

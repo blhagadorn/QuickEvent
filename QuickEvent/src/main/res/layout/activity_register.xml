@@ -39,10 +39,8 @@
         android:id="@+id/registercreatebutton"
         android:background="@color/red4"
         android:textSize="35sp"
-        android:layout_below="@+id/registerbirthdayedittext"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="5dp" />
+        android:layout_above="@+id/registerloginbutton"
+        android:layout_alignParentRight="true" />
 
     <ImageButton
         android:layout_width="80dp"
@@ -67,17 +65,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/registercreatebutton" />
 
-    <EditText
+    <DatePicker
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/registerbirthdayedittext"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"
         android:layout_below="@+id/registerpasswordedittext"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="2dp"
-        android:layout_alignRight="@+id/registerpasswordedittext"
-        android:background="@color/white"
-        android:text="What's your birthday?" />
+        android:layout_toLeftOf="@+id/registercreatebutton" />
 
 </RelativeLayout>

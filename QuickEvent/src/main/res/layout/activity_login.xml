@@ -64,10 +64,10 @@
         android:layout_height="wrap_content"
         android:text=" Not registered? "
         android:id="@+id/loginnotregisteredbutton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:background="@color/red4"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:layout_width="wrap_content"

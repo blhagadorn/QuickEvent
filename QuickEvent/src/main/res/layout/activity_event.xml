@@ -9,4 +9,14 @@
     tools:context=".EventActivity"
     android:background="@color/greylight">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Event page"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="40dp" />
 </RelativeLayout>

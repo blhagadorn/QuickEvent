@@ -1,10 +1,12 @@
 package com.redhammerstudios.quickevent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 
 public class SplashActivity extends Activity {
@@ -21,7 +23,21 @@ public class SplashActivity extends Activity {
         login = (Button)findViewById(R.id.splashloginbutton);
         register = (Button) findViewById(R.id.splashregisterbutton);
 
-        login.setOnClickListener();
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 
@@ -34,7 +50,7 @@ public class SplashActivity extends Activity {
     }
 
 
-    public boolean checkIfLoggedIn(){
+    public boolean checkIfStayLoggedIn(){
         SharedPreferences prefs = this.getSharedPreferences(
                 "com.redhammerstudios.quickevent", Context.MODE_PRIVATE);
         return prefs.getBoolean("skipLogin",false);
